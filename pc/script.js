@@ -27,9 +27,9 @@ function validateAccess() {
     const loginTime = parseInt(sessionStorage.getItem('login_time') || '0');
     const currentTime = Date.now();
     
-    // Проверка 1: есть ли фамилия
+    // Проверка 1: есть ли пароль
     if (!surname) {
-        console.log('❌ Нет фамилии в сессии');
+        console.log('❌ Нет пароля в сессии');
         return false;
     }
     
@@ -131,7 +131,7 @@ async function init() {
         return;
     }
     
-    // Шаг 2: Проверяем через Gist (активна ли фамилия)
+    // Шаг 2: Проверяем через Gist (активен ли пароль)
     const surname = sessionStorage.getItem('user_surname');
     const isActive = await checkGistAccess(surname);
     
