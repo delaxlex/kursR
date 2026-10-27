@@ -55,7 +55,7 @@ async function handleLogin() {
     
     // Валидация
     if (!surname) {
-        showMessage('Пожалуйста, введите вашу фамилию', 'error');
+        showMessage('Пожалуйста, введите ваш пароль', 'error');
         return;
     }
 
